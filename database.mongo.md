@@ -36,7 +36,7 @@ index: {fid:1}
 </table>
 
 
-## FeedLoc  
+## Feed Location  
 table name: feedLoc  
 index: {loc:'2d'}  
 
@@ -61,7 +61,8 @@ index: {loc:'2d'}
 
 ## User  
 table name: user  
-index: {uid:1}, {username:1}, {email:1}  
+index: {uid:1}, {username:1}(unique:true), {email:1}(unique:true)  
+all the fields are required.  
 
 <table>
   <tr>
@@ -85,6 +86,16 @@ index: {uid:1}, {username:1}, {email:1}
     <td>encrypted password</td>
   </tr>
   <tr>
+    <td>avatar</td>
+    <td>string</td>
+    <td>avatar url</td>
+  </tr>
+  <tr>
+    <td>sex</td>
+    <td>int</td>
+    <td>0 means man, 1 means woman, 2 means others</td>
+  </tr>
+  <tr>
     <td>rtime</td>
     <td>int64</td>
     <td>register time, millisecond</td>
@@ -93,6 +104,89 @@ index: {uid:1}, {username:1}, {email:1}
     <td>status</td>
     <td>int</td>
     <td>0 means ok, 1 means deleted</td>
+  </tr>
+</table>
+
+
+## User Expand  
+table name: usreExpand  
+index: {uid:1}  
+all the fields are optional.  
+
+<table>
+  <tr>
+    <td>uid</td>
+    <td>string</td>
+    <td>user id</td>
+  </tr>
+  <tr>
+    <td>blog</td>
+    <td>string</td>
+    <td>blog address</td>
+  </tr>
+  <tr>
+    <td>address</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>birthday</td>
+    <td>string</td>
+    <td>yyyy-mm-dd</td>
+  </tr>
+  <tr>
+    <td>phone</td>
+    <td>string</td>
+    <td>phone number</td>
+  </tr>
+  <tr>
+    <td>qq</td>
+    <td>string</td>
+    <td>qq account</td>
+  </tr>
+  <tr>
+    <td>msn</td>
+    <td>string</td>
+    <td>msn account</td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td>string</td>
+    <td>self descrition</td>
+  </tr>
+  <tr>
+    <td>logcnt</td>
+    <td>int</td>
+    <td>login count</td>
+  </tr>
+  <tr>
+    <td>lltime</td>
+    <td>int64</td>
+    <td>last login time</td>
+  </tr>
+</table>
+
+
+## User Location  
+table name: userLoc  
+index: {lloc.loc.:'2d'}  
+Location: {time:int64, loc:[lat, lon]}  
+
+<table>
+  <tr>
+    <td>uid</td>
+    <td>string</td>
+    <td>feed id</td>
+  </tr>
+  <tr>
+    <td>lloc</td>
+    <td>Location</td>
+    <td>last location</td>
+  </tr>
+  <tr>
+    <td>hloc</td>
+    <td>Location array</td>
+    <td>history locations</td>
   </tr>
 </table>
 
