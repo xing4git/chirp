@@ -134,3 +134,25 @@ index: {cid:1}
   </tr>
 </table>
 
+
+## Follow  
+table name: follow  
+index: {uid:1, beuid:1}(unique:true)  
+
+<table>
+  <tr>
+    <td>uid</td>
+    <td>string</td>
+    <td>uid follows beuid</td>
+  </tr>
+  <tr>
+    <td>beuid</td>
+    <td>string</td>
+    <td>the user id who was followed</td>
+  </tr>
+  <tr>
+    <td>ctime</td>
+    <td>int64</td>
+    <td>create time, millisecond</td>
+  </tr>
+</table>
