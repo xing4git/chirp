@@ -1,8 +1,8 @@
 ## Feed  
 table name: feed  
-index: fid_1  
+index: {fid:1} 
 
-<table border="1" align="center">
+<table>
   <tr>
     <td>fid</td>
     <td>string</td>
@@ -36,13 +36,101 @@ index: fid_1
 </table>
 
 
-## FeedLoc
+## FeedLoc  
+table name: feedLoc  
+index: {loc:'2d'}  
+
+<table>
+  <tr>
+    <td>fid</td>
+    <td>string</td>
+    <td>feed id</td>
+  </tr>
+  <tr>
+    <td>loc</td>
+    <td>array</td>
+    <td>[lat, lon]</td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td>int</td>
+    <td>0 means ok, 1 means deleted</td>
+  </tr>
+</table>
 
 
+## User  
+table name: user  
+index: {uid:1}, {username:1}, {email:1}  
 
-## User
+<table>
+  <tr>
+    <td>uid</td>
+    <td>string</td>
+    <td>user id</td>
+  </tr>
+  <tr>
+    <td>username</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>email</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>pwd</td>
+    <td>string</td>
+    <td>encrypted password</td>
+  </tr>
+  <tr>
+    <td>rtime</td>
+    <td>int64</td>
+    <td>register time, millisecond</td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td>int</td>
+    <td>0 means ok, 1 means deleted</td>
+  </tr>
+</table>
 
 
-## Comment
+## Comment  
+table name: comment  
+index: {cid:1}  
 
+<table>
+  <tr>
+    <td>cid</td>
+    <td>string</td>
+    <td>comment id</td>
+  </tr>
+  <tr>
+    <td>uid</td>
+    <td>string</td>
+    <td>user id</td>
+  </tr>
+  <tr>
+    <td>fid</td>
+    <td>string</td>
+    <td>feed id</td>
+  </tr>
+  <tr>
+    <td>content</td>
+    <td>string</td>
+    <td>comment content</td>
+  </tr>
+  <tr>
+    <td>ctime</td>
+    <td>int64</td>
+    <td>create time, millisecond</td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td>int</td>
+    <td>0 means ok, 1 means deleted</td>
+  </tr>
+</table>
 
