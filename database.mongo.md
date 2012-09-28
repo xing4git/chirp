@@ -2,7 +2,7 @@
 table name: feed  
 index: fid_1  
 
-<table border="1">
+<table border="1" align="center">
   <tr>
     <td>fid</td>
     <td>string</td>
