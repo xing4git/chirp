@@ -4,6 +4,11 @@ index: {fid:1}
 
 <table>
   <tr>
+  	<th>field</th>
+  	<th>type</th>
+  	<th>descrition</th>
+  </tr>
+  <tr>
     <td>fid</td>
     <td>string</td>
     <td>feed id</td>
@@ -42,6 +47,11 @@ index: {loc:'2d'}
 
 <table>
   <tr>
+  	<th>field</th>
+  	<th>type</th>
+  	<th>descrition</th>
+  </tr>
+  <tr>
     <td>fid</td>
     <td>string</td>
     <td>feed id</td>
@@ -65,6 +75,11 @@ index: {uid:1}, {username:1}(unique:true), {email:1}(unique:true)
 all the fields are required.  
 
 <table>
+  <tr>
+  	<th>field</th>
+  	<th>type</th>
+  	<th>descrition</th>
+  </tr>
   <tr>
     <td>uid</td>
     <td>string</td>
@@ -114,6 +129,11 @@ index: {uid:1}
 all the fields are optional.  
 
 <table>
+  <tr>
+  	<th>field</th>
+  	<th>type</th>
+  	<th>descrition</th>
+  </tr>
   <tr>
     <td>uid</td>
     <td>string</td>
@@ -174,6 +194,11 @@ Location: {time:int64, loc:[lat, lon]}
 
 <table>
   <tr>
+  	<th>field</th>
+  	<th>type</th>
+  	<th>descrition</th>
+  </tr>
+  <tr>
     <td>uid</td>
     <td>string</td>
     <td>feed id</td>
@@ -196,6 +221,11 @@ table name: comment
 index: {cid:1}  
 
 <table>
+  <tr>
+  	<th>field</th>
+  	<th>type</th>
+  	<th>descrition</th>
+  </tr>
   <tr>
     <td>cid</td>
     <td>string</td>
@@ -234,6 +264,11 @@ table name: follow
 index: {uid:1, beuid:1}(unique:true)  
 
 <table>
+  <tr>
+  	<th>field</th>
+  	<th>type</th>
+  	<th>descrition</th>
+  </tr>
   <tr>
     <td>uid</td>
     <td>string</td>
