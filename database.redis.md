@@ -8,7 +8,7 @@
   </tr>
   <tr>
     <td>user:timeline:*</td>
-    <td>set</td>
+    <td>sorted set</td>
   </tr>
 </table>
 
@@ -23,7 +23,7 @@
   </tr>
   <tr>
     <td>user:at:*</td>
-    <td>set</td>
+    <td>sorted set</td>
   </tr>
 </table>
 
