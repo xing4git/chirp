@@ -61,11 +61,6 @@ index: {loc:'2d'}
     <td>array</td>
     <td>[lat, lon]</td>
   </tr>
-  <tr>
-    <td>status</td>
-    <td>int</td>
-    <td>0 means ok, 1 means deleted</td>
-  </tr>
 </table>
 
 
