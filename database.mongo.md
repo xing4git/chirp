@@ -43,7 +43,7 @@ others like Feed
 
 ## Feed Location  
 table name: feedLoc  
-index: {loc:'2d'}  
+index: {loc.loc:'2d'}  
 
 <table>
   <tr>
@@ -58,8 +58,8 @@ index: {loc:'2d'}
   </tr>
   <tr>
     <td>loc</td>
-    <td>array</td>
-    <td>[lat, lon]</td>
+    <td>Location</td>
+    <td>{time:int64, loc:[lat, lon]}</td>
   </tr>
 </table>
 
