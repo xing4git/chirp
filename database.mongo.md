@@ -1,6 +1,6 @@
 ## Feed  
 table name: feed  
-index: {fid:1} 
+index: {fid:1}  
 
 <table>
   <tr>
@@ -33,12 +33,12 @@ index: {fid:1}
     <td>int64</td>
     <td>create time, millisecond</td>
   </tr>
-  <tr>
-    <td>status</td>
-    <td>int</td>
-    <td>0 means ok, 1 means deleted</td>
-  </tr>
 </table>
+
+
+## Feed Deleted  
+table name: feed_del  
+others like Feed  
 
 
 ## Feed Location  
@@ -62,6 +62,11 @@ index: {loc:'2d'}
     <td>[lat, lon]</td>
   </tr>
 </table>
+
+
+## Feed Location Deleted  
+table name: feedLoc_del  
+others like Feed Location  
 
 
 ## User  
@@ -110,12 +115,12 @@ all the fields are required.
     <td>int64</td>
     <td>register time, millisecond</td>
   </tr>
-  <tr>
-    <td>status</td>
-    <td>int</td>
-    <td>0 means ok, 1 means deleted</td>
-  </tr>
 </table>
+
+
+## User Deleted  
+table name: user_del  
+others like User  
 
 
 ## User Expand  
@@ -182,6 +187,11 @@ all the fields are optional.
 </table>
 
 
+## User Expand Deleted  
+table name: usreExpand_del  
+others like User Expand  
+
+
 ## User Location  
 table name: userLoc  
 index: {lloc.loc.:'2d'}  
@@ -209,6 +219,11 @@ Location: {time:int64, loc:[lat, lon]}
     <td>history locations</td>
   </tr>
 </table>
+
+
+## User Location Deleted  
+table name: userLoc_del  
+others like User Location  
 
 
 ## Comment  
@@ -246,12 +261,12 @@ index: {cid:1}
     <td>int64</td>
     <td>create time, millisecond</td>
   </tr>
-  <tr>
-    <td>status</td>
-    <td>int</td>
-    <td>0 means ok, 1 means deleted</td>
-  </tr>
 </table>
+
+
+## Comment Deleted  
+table name: comment_del  
+others like Comment  
 
 
 ## Follow  
