@@ -59,7 +59,7 @@ index: {loc.loc:'2d'}
   <tr>
     <td>loc</td>
     <td>Location</td>
-    <td>{time:int64, loc:[lat, lon]}</td>
+    <td>{ctime:int64, loc:[lat, lon]}</td>
   </tr>
 </table>
 
@@ -195,7 +195,7 @@ others like User Expand
 ## User Location  
 table name: userLoc  
 index: {lloc.loc.:'2d'}  
-Location: {time:int64, loc:[lat, lon]}  
+Location: {ctime:int64, loc:[lat, lon]}  
 
 <table>
   <tr>
