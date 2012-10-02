@@ -10,7 +10,7 @@ index: {fid:1}
   </tr>
   <tr>
     <td>fid</td>
-    <td>string</td>
+    <td>bson.ObjectId</td>
     <td>feed id</td>
   </tr>
   <tr>
@@ -82,7 +82,7 @@ all the fields are required.
   </tr>
   <tr>
     <td>uid</td>
-    <td>string</td>
+    <td>bson.ObjectId</td>
     <td>user id</td>
   </tr>
   <tr>
