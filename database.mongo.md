@@ -111,7 +111,7 @@ all the fields are required.
     <td>0 means man, 1 means woman, 2 means others</td>
   </tr>
   <tr>
-    <td>rtime</td>
+    <td>ctime</td>
     <td>int64</td>
     <td>register time, millisecond</td>
   </tr>
@@ -175,7 +175,7 @@ all the fields are optional.
     <td>self descrition</td>
   </tr>
   <tr>
-    <td>logcnt</td>
+    <td>logincnt</td>
     <td>int</td>
     <td>login count</td>
   </tr>
@@ -214,7 +214,7 @@ Location: {ctime:int64, loc:[lat, lon]}
     <td>last location</td>
   </tr>
   <tr>
-    <td>hloc</td>
+    <td>hlocs</td>
     <td>Location array</td>
     <td>history locations</td>
   </tr>
