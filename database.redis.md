@@ -14,7 +14,7 @@
 
 
 ## At  
-"*" means uid, feeds or comments which @ uid. "score" is @ time, "value" contains @ type(feed or comment) and id(feed id or comment id).  
+"*" means uid, feed which at uid. "score" is time, "value" is feed id.  
 
 <table>
   <tr>
@@ -28,7 +28,7 @@
 </table>
 
 
-## Fan List  
+## Fans List  
 "*" means uid, fans list of uid. "score" is follow time, "value" is uid.
 
 <table>
@@ -37,13 +37,13 @@
   	<th>type</th>
   </tr>
   <tr>
-    <td>user:fan:*</td>
+    <td>user:fans:*</td>
     <td>sorted set</td>
   </tr>
 </table>
 
 
-## Follow List  
+## Follows List  
 "*" means uid, follow list of uid. "score" is follow time, "value" is uid.  
 
 <table>
@@ -52,13 +52,13 @@
   	<th>type</th>
   </tr>
   <tr>
-    <td>user:follow:*</td>
+    <td>user:follows:*</td>
     <td>sorted set</td>
   </tr>
 </table>
 
 
-## Feed List  
+## Feeds List  
 "*" means uid, feeds list of uid. "score" is feed create time, "value" is fid.  
 
 <table>
@@ -67,13 +67,13 @@
   	<th>type</th>
   </tr>
   <tr>
-    <td>user:feed:*</td>
+    <td>user:feeds:*</td>
     <td>sorted set</td>
   </tr>
 </table>
 
 
-## Comment List  
+## Comments List  
 "*" means feed id, comments list of fid. "score" is comment create time, "value" is cid.  
 
 <table>
@@ -82,13 +82,13 @@
   	<th>type</th>
   </tr>
   <tr>
-    <td>feed:comment:*</td>
+    <td>feed:comments:*</td>
     <td>sorted set</td>
   </tr>
 </table>
 
 
-## Forward List  
+## Forwards List  
 "*" means feed id, forward list of fid. "score" is forward feed create time, "value" is forward feed id.  
 
 <table>
@@ -97,7 +97,7 @@
   	<th>type</th>
   </tr>
   <tr>
-    <td>feed:forward:*</td>
+    <td>feed:forwards:*</td>
     <td>sorted set</td>
   </tr>
 </table>
