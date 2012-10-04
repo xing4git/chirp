@@ -3,12 +3,14 @@ package mongo
 import (
 	"github.com/xing4git/chirp/util"
 	"github.com/xing4git/chirp/conf"
-	"github.com/xing4git/chirp/log"
+	"github.com/xing4git/chirp/chirplog"
 	"errors"
 	"strconv"
 	"time"
 	"labix.org/v2/mgo"
 )
+
+var log = chirplog.New("mongo")
 
 type pool struct {
 	sessions    []*mgo.Session
@@ -25,7 +27,7 @@ func (s *Session) Close() {
 	if s.Session != nil {
 		s.sp.avaliableCh <- s.Session
 		s.Session = nil
-		log.Logger.Debugf("session usage time: %f ms", time.Now().Sub(s.start).Seconds()*1e3)
+		log.Debugf("session usage time: %f ms", time.Now().Sub(s.start).Seconds()*1e3)
 	}
 }
 
@@ -39,7 +41,7 @@ func GetSession() *Session {
 	s.sp = sp
 	end := time.Now()
 	s.start = end
-	log.Logger.Debugf("fetch session time: %f ms", end.Sub(start).Seconds()*1e3)
+	log.Debugf("fetch session time: %f ms", end.Sub(start).Seconds()*1e3)
 	return s
 }
 

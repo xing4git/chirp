@@ -11,9 +11,14 @@ const (
 
 	CONF_KEY_MONGO_URL          = "mongo.url"
 	CONF_KEY_MONGO_MAX_SESSIONS = "mongo.max.sessions"
+
+	// CONF_KEY_REDIS_SYNC        = "redis.sync"
+	CONF_KEY_REDIS_MAX_CLIENTS = "redis.max.clients"
+
+	CONF_KEY_SERVER_LISTEN_PORT = "server.listen.port"
 )
 
-// mongo database and collections name
+// mongo
 const (
 	MONGO_DATABASE                    = "chirp"
 	MONGO_COLLECTION_FEED             = "feed"
@@ -33,4 +38,21 @@ const (
 	MONGO_COLLECTION_USER_LOC_DEL    = "userLoc_del"
 
 	MONGO_COLLECTION_FOLLOW = "follow"
+)
+
+// redis
+const (
+	REDIS_DATABASE = 1
+
+	REDIS_USER_TIMELINE = "user:timeline:"
+	REDIS_USER_AT       = "user:at:"
+	REDIS_USER_FANS     = "user:fans:"
+	REDIS_USER_FOLLOWS  = "user:follows:"
+	REDIS_USER_FEEDS    = "user:feeds:"
+	REDIS_FEED_COMMENTS = "feed:comments:"
+	REDIS_FEED_FORWARDS = "feed:forwards:"
+)
+
+const (
+	BACKEND_HANDLE_STEP = 100
 )

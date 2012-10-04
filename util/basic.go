@@ -17,3 +17,14 @@ func StartupFatalErr(err error) {
 func UnixMillSeconds() int64 {
 	return time.Now().UnixNano() / 1e6
 }
+
+func SafeEmptyFunc(f func()) func() {
+	return func() {
+		defer func() {
+			if r := recover(); r != nil {
+				fmt.Fprintf(os.Stderr, "panic: %+v\n", r)
+			}
+		}()
+		f()
+	}
+}

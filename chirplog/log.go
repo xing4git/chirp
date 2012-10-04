@@ -1,4 +1,4 @@
-package log
+package chirplog
 
 import (
 	"github.com/xing4git/chirp/conf"
@@ -7,10 +7,11 @@ import (
 	"errors"
 	"os"
 	"strconv"
+	"strings"
 )
 
-var Logger *golog.Logger
 var logfile *os.File
+var loglevel int
 
 func init() {
 	logpath, ok := conf.Conf[util.CONF_KEY_LOGPATH]
@@ -21,15 +22,16 @@ func init() {
 	logfile, err = os.OpenFile(logpath, os.O_RDWR|os.O_APPEND|os.O_CREATE, 0664)
 	util.StartupFatalErr(err)
 
-	loglevel, ok := conf.Conf[util.CONF_KEY_LOGLEVEL]
+	loglevelstr, ok := conf.Conf[util.CONF_KEY_LOGLEVEL]
 	if !ok {
 		util.StartupFatalErr(errors.New("Must contain " + util.CONF_KEY_LOGLEVEL + " in conf"))
 	}
-	var level int
-	level, err = strconv.Atoi(loglevel)
+	loglevel, err = strconv.Atoi(loglevelstr)
 	util.StartupFatalErr(err)
+}
 
-	Logger = golog.NewLogger(logfile, "", level, golog.FLAG_LstdFlags)
+func New(prefix string) *golog.Logger {
+	return golog.NewLogger(logfile, strings.ToUpper(prefix), loglevel, golog.FLAG_LstdFlags)
 }
 
 func Shutdown() {
